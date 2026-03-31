@@ -84,4 +84,6 @@ We also broadened the UEA comparison by adding Transformer, RFormer, TS2Vec, MOM
 | 9012 | 46.94 |
 | Average | **51.34 ± 5.55** |
  
- 
+**Figure R1: Examples of the six UEA datasets.** EthanolConcentration appears qualitatively different from the other tasks, with a smoother profile dominated by a broad peak and class-dependent shape changes over an extended region.
+
+![UEA dataset examples](uea_examples.png)
