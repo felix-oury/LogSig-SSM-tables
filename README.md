@@ -4,7 +4,8 @@ We thank all reviewers for the constructive feedback. To address the shared conc
  
 On Weather forecasting (predicting 30 days of hourly multivariate climatological data from the previous 30 days), LogSig-SSM achieves the best MAE of **0.432**, improving over D-LinOSS (0.486) and all other listed methods (Table R1). On PhysioNet Sepsis (early sepsis prediction from highly irregular clinical records where only 10.3% of values are observed), LogSig-SSM achieves **90.3 / 87.5** AUROC with/without observation indicators (Table R2), remaining competitive with specialised irregular-time methods.
  
-We also broadened the UEA comparison by adding Transformer, RFormer, TS2Vec, MOMENT, TSPulse, and PD-SSM (Table R3), and conducted a patching ablation (Table R4) replacing log-signatures with learned patch embeddings on the same windows and backbone. Both patching variants improve over raw Mamba but fall well below LogSig-SSM confirming that the gains come from log-signature geometry, not compression alone.
+We also broadened the UEA comparison by adding Transformer, RFormer, TS2Vec, MOMENT, TSPulse, and PD-SSM (Table R3), and conducted a patching ablation (Table R4) replacing log-signatures with learned patch embeddings on the same windows and backbone. Both patching variants improve over raw Mamba but fall well below LogSig-SSM confirming that the gains come from log-signature geometry, not compression alone. Finally, we provide additional seeds on EthanolConcentration confirming stability (Table R5) and a visualisation of the six UEA datasets illustrating the qualitative differences between tasks (Figure R1).
+
  
 **Table R1: Weather Forecasting (MAE ↓)**
 | Model | MAE |
@@ -20,7 +21,7 @@ We also broadened the UEA comparison by adding Transformer, RFormer, TS2Vec, MOM
 | D-LinOSS | _0.486_ |
 | **LogSig-SSM** | **0.432** |
  
-**Table R2: PhysioNet Sepsis (AUROC % ↑)**
+**Table R2: PhysioNet Sepsis (AUROC ↑)**
 | Method | OI | No OI |
 |---|---:|---:|
 | GRU-Δt | 87.8 ± 0.6 | 84.0 ± 0.7 |
